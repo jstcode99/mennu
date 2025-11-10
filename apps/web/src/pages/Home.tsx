@@ -1,0 +1,22 @@
+import { useEffect, useState } from 'react';
+import { fetchUsers, createUser } from '../services/user.service';
+
+export default function Home() {
+    const [users, setUsers] = useState<any[]>([]);
+
+    useEffect(() => {
+        fetchUsers().then(setUsers).catch(console.error);
+    }, []);
+
+    return (
+        <div>
+            <h1>Users</h1>
+            <ul>
+                {users.map(u => <li key={u.id}>{u.name} ({u.email})</li>)}
+            </ul>
+            <button onClick={() => createUser({ name: 'Test', email: 't@t.com' }).then(() => fetchUsers().then(setUsers))}>
+                Crear user
+            </button>
+        </div>
+    );
+}

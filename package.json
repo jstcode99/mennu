@@ -1,0 +1,17 @@
+{
+  "name": "mannu",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "pnpm@9.0.0",
+  "workspaces": [
+    "apps/*",
+    "libs/*"
+  ],
+  "scripts": {
+    "dev:api": "rm -rf dist && pnpm --filter ./apps/api start",
+    "dev:web": "pnpm --filter ./apps/web dev",
+    "build:libs": "pnpm -r --filter ./libs/* run build",
+    "lint": "eslint . --ext .ts,.tsx --fix",
+    "format": "prettier --write ."
+  }
+}

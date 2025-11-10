@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    /* === General === */
+    "target": "ES2021",
+    "module": "CommonJS",
+    "moduleResolution": "node16",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "isolatedModules": true,
+    "noEmitOnError": false,
+
+    /* === Paths & Base === */
+    "baseUrl": ".",
+    "paths": {
+      "@shared-domain/*": ["libs/shared-domain/src/*"],
+      "@shared-dtos/*": ["libs/shared-dtos/src/*"],
+      "@shared-utils/*": ["libs/shared-utils/src/*"]
+    },
+
+    /* === Output === */
+    "outDir": "dist",
+    "rootDir": ".",
+    "removeComments": true,
+
+    /* === Type Checking === */
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noImplicitAny": false,
+    "resolveJsonModule": true,
+    "allowJs": false,
+
+    /* === JSX (para React) === */
+    "jsx": "react-jsx"
+  },
+  "include": ["apps/**/*", "libs/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

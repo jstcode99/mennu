@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "../../dist/apps/web",
+    "rootDir": "src",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "allowImportingTsExtensions": false,
+    "isolatedModules": true,
+    "composite": true,
+    "noEmit": true
+  },
+  "include": ["src", "vite-env.d.ts"],
+  "references": []
+}

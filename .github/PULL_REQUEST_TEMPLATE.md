@@ -2,9 +2,10 @@
 
 ## Description
 
-Please include a summary of the changes and the related issue number. 
+Please include a summary of the changes and the related issue number.
 
 ## Checklist
+
 - [ ] I have read the [CONTRIBUTING](LINK_TO_CONTRIBUTING_DOC) document.
 - [ ] My code follows the code style of this project.
 - [ ] I have made corresponding changes to the documentation.

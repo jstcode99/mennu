@@ -9,8 +9,8 @@ export default function Home() {
     }, []);
 
     return (
-        <div>
-            <h1>Users</h1>
+        <div className='p-4 container'>
+            <h1 className='text-2xl uppercase'>Users</h1>
             <ul>
                 {users.map(u => <li key={u.id}>{u.name} ({u.email})</li>)}
             </ul>

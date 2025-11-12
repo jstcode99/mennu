@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { fetchUsers, createUser } from '../services/user.service';
+import { Link } from 'react-router';
 
 export default function Home() {
     const [users, setUsers] = useState<any[]>([]);
@@ -17,6 +18,8 @@ export default function Home() {
             <button onClick={() => createUser({ name: 'Test', email: 't@t.com' }).then(() => fetchUsers().then(setUsers))}>
                 Crear user
             </button>
+            <hr className='my-4' />
+            <Link to="/login">Go to Login</Link>
         </div>
     );
 }

@@ -49,11 +49,11 @@ export const SignInForm: FC<ComponentProps<"div">> = ({
             clear();
         }
         if (response.status === 201) {
-            const { access_token, payload } = await response.json();
+            const { access_token, name, email } = await response.json();
             setAccessToken(access_token);
-            setEmail(payload.username);
+            setEmail(email);
             toast("Welcome ", {
-                description: `Hi, ${payload.sub}`,
+                description: `Hi, ${name}`,
             })
             navigate("/welcome");
         }

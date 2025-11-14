@@ -1,35 +1,12 @@
-import { useEffect, useState } from 'react';
-import { fetchUsers, createUser } from '../services/user.service';
 import { Link } from 'react-router';
-import { Button } from '@/components/ui/button';
+import { Separator } from '@radix-ui/react-separator';
 
-export default function Home() {
-    const [users, setUsers] = useState<any[]>([]);
-
-    const handleCreateUser = async () => {
-        const newUser = await createUser({
-            name: 'New User',
-            email: `user${Date.now()}@example.com`,
-            password: 'Password123',
-        });
-        setUsers([...users, newUser]);
-    }
-
-    useEffect(() => {
-        fetchUsers().then(setUsers).catch(console.error);
-    }, []);
-
+export default function Home() {    
     return (
-        <div className='p-4 container'>
-            <h1 className='text-2xl uppercase'>Users</h1>
-            <ul>
-                {users.map(u => <li key={u.id}>{u.name} ({u.email})</li>)}
-            </ul>
-            <Button onClick={handleCreateUser}>
-                Crear user
-            </Button>
-            <hr className='my-4' />
-            <Link to="/login">Go to Login</Link>
+        <div className='h-screen w-full p-4 flex justify-center items-center gap-2 text-blue-900'>
+            <Link to="/sign-in">Sign In</Link>
+            <Separator orientation='vertical' className='text-blue-100' />
+            <Link to="/sign-up">Sign Up</Link>
         </div>
     );
 }

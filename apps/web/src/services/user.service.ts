@@ -4,7 +4,7 @@ export async function fetchUsers() {
     return res.json();
 }
 
-export async function createUser(payload: { name: string; email: string }) {
+export async function createUser(payload: { name: string; email: string, password: string }) {
     const res = await fetch('http://localhost:3000/users', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

@@ -8,7 +8,7 @@
     "libs/*"
   ],
   "scripts": {
-    "dev:api": "rm -rf dist && pnpm --filter ./apps/api start",
+    "dev:api": "rm -rf apps/api/dist && pnpm --filter ./apps/api start:dev",
     "dev:web": "pnpm --filter ./apps/web dev",
     "build:libs": "pnpm -r --filter ./libs/* run build",
     "lint": "eslint . --ext .ts,.tsx --fix",

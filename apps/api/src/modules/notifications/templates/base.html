@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .header h1 {
+            color: #333333;
+        }
+
+        .content {
+            line-height: 1.6;
+            color: #555555;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 20px 0;
+            background-color: #4CAF50;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .footer {
+            font-size: 12px;
+            color: #999999;
+            text-align: center;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>{{subject}}!</h1>
+        </div>
+        <div class="content">
+            <p>Hola {{email}}!</p>
+            <p>{{message}}!</p>
+            <p>Para empezar, haz clic en el siguiente botón para acceder a tu cuenta y explorar todas las
+                funcionalidades que hemos preparado para ti:</p>
+            <p style="text-align: center;">
+                <a href="http://localhost:5173/sign-in" class="button">Ir a mi cuenta</a>
+            </p>
+            <p>Si tienes alguna pregunta o necesitas ayuda, no dudes en contactarnos.</p>
+            <p>¡Disfruta tu experiencia!</p>
+            <p>El equipo de Mennu</p>
+        </div>
+        <div class="footer">
+            <p>&copy; 2025 Mennu. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</body>
+
+</html>

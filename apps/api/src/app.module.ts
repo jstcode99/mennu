@@ -1,13 +1,14 @@
 import { Module } from '@nestjs/common';
 import { JwtModule } from '@nestjs/jwt';
-
+import { ConfigModule } from '@nestjs/config';
 import { UsersModule } from '@modules/users/users.module';
 import { AuthModule } from '@modules/auth/auth.module';
-
+import { NotificationsModule } from '@modules/notifications/notifications.module';
 
 @Module({
   imports: [
-    // JwtModule global config (puedes mover a módulo propio si prefieres)
+
+    NotificationsModule,
     JwtModule.register({
       global: true,
       secret: process.env.JWT_SECRET || 'dev_secret_change_me',
@@ -15,6 +16,7 @@ import { AuthModule } from '@modules/auth/auth.module';
     }),
     UsersModule,
     AuthModule,
+    ConfigModule.forRoot({ isGlobal: true }),
   ],
 })
-export class AppModule {}
+export class AppModule { }

@@ -10,9 +10,18 @@ git clone git@github.com:jstcode99/mennu.git
 cd mennu
 ```
 
+
 2️⃣ Instalar dependencias
 ```bash
 pnpm install
+```
+y sustituir variables de entorno, servicio de prueba recomandado [mailtrap](https://mailtrap.io)
+
+```bash
+SMTP_HOST=
+SMTP_PORT=
+SMTP_USER=
+SMTP_PASS=
 ```
 
 3️⃣ Ejecutar la API
